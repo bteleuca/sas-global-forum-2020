@@ -1,0 +1,3 @@
+*test;
+proc setinit;
+run;
