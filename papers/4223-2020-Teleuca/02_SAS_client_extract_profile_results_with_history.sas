@@ -3,7 +3,7 @@
 /*                                                                   */
 /* This SAS DATA step reads a profile results table created by       */
 /* CAS action dataDiscover.profile, which is part                    */
-/* SAS Data Preparation 2.2, and extracts the information into the   */
+/* SAS Data Preparation, and extracts the information into the   */
 /* following tables make reporting easier:                           */
 /*   - profile_results_column_metrics                                */
 /*   - profile_results_tableinfo                                     */
