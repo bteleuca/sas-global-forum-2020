@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Resources>
+    <Resource label="Debt to Income Ratio" createDate="2020-01-06T01:49:26.586-05:00" identity="Data Governance\Banking\AnaCredit 2.0\Loan Portfolio\Debt to Income Ratio" type="BDNTERM">
+        <Attributes>
+            <attribute name="Description" value="Loan reimbursement capacity metric"/>
+            <attribute name="Requirements" value="monthly installments of unsecured commitments * 12 / annual income.&#xA;Aggregated at a person or household level."/>
+            <attribute name="Status" value="Production"/>
+            <attribute name="Importance" value="Medium"/>
+            <attribute name="CreatedByUser" value="sasdemo"/>
+            <attribute name="ModifiedByUser" value="sasdemo"/>
+            <attribute name="Type" value="DGB"/>
+            <attribute name="Version" value="6"/>
+            <attribute name="VersionID" value="1002174"/>
+        </Attributes>
+        <Dependencies>
+            <dependency type="I">
+                <Resource identity="Data Governance\Banking\AnaCredit 2.0\Loan Portfolio\Debt to Income Ratio\Contact0" type="BDNCONTACT">
+                    <Dependencies>
+                        <dependency type="A">
+                            <Resource label="Henry Wilson" identity="Henry Wilson" type="BDNACCOUNT"/>
+                            <Resource label="IT Custodian" identity="IT Custodian" type="BDNROLE"/>
+                        </dependency>
+                    </Dependencies>
+                </Resource>
+                <Resource identity="Data Governance\Banking\AnaCredit 2.0\Loan Portfolio\Debt to Income Ratio\Contact1" type="BDNCONTACT">
+                    <Dependencies>
+                        <dependency type="A">
+                            <Resource label="Noah Brown" identity="Noah Brown" type="BDNACCOUNT"/>
+                            <Resource label="Data Owner" identity="Data Owner" type="BDNROLE"/>
+                        </dependency>
+                    </Dependencies>
+                </Resource>
+                <Resource identity="Data Governance\Banking\AnaCredit 2.0\Loan Portfolio\Debt to Income Ratio\Contact2" type="BDNCONTACT">
+                    <Dependencies>
+                        <dependency type="A">
+                            <Resource label="Jack Williams" identity="Jack Williams" type="BDNACCOUNT"/>
+                            <Resource label="Data Steward" identity="Data Steward" type="BDNROLE"/>
+                        </dependency>
+                    </Dependencies>
+                </Resource>
+                <Resource label="Business Rules" identity="Data Governance\Banking\AnaCredit 2.0\Loan Portfolio\Debt to Income Ratio\Attribute0" type="BDNATTRIB">
+                    <Attributes>
+                        <attribute name="Instructions" value="Explain the business rules assigned to this Entity. They will be translated into data quality controls if necessary."/>
+                        <attribute name="Value" value=""/>
+                        <attribute name="Required" value="N"/>
+                        <attribute name="Type" value="Common"/>
+                    </Attributes>
+                </Resource>
+                <Resource label="Data Quality Controls" identity="Data Governance\Banking\AnaCredit 2.0\Loan Portfolio\Debt to Income Ratio\Attribute1" type="BDNATTRIB">
+                    <Attributes>
+                        <attribute name="Instructions" value="Specifies the controls to be put in place to comply with the business rules."/>
+                        <attribute name="Value" value="positive number between 0 and 1"/>
+                        <attribute name="Required" value="N"/>
+                        <attribute name="Type" value="Common"/>
+                    </Attributes>
+                </Resource>
+                <Resource label="Business Impact Score" identity="Data Governance\Banking\AnaCredit 2.0\Loan Portfolio\Debt to Income Ratio\Attribute2" type="BDNATTRIB">
+                    <Attributes>
+                        <attribute name="Instructions" value="1 = Lowest&#xA;5 = Highest"/>
+                        <attribute name="Value" value="5"/>
+                        <attribute name="Required" value="Y"/>
+                        <attribute name="Type" value="Common"/>
+                    </Attributes>
+                </Resource>
+                <Resource label="Business Impact Description" identity="Data Governance\Banking\AnaCredit 2.0\Loan Portfolio\Debt to Income Ratio\Attribute3" type="BDNATTRIB">
+                    <Attributes>
+                        <attribute name="Instructions" value="Specify the impact that determines the score"/>
+                        <attribute name="Value" value=""/>
+                        <attribute name="Required" value="N"/>
+                        <attribute name="Type" value="Common"/>
+                    </Attributes>
+                </Resource>
+                <Resource label="Quality Risk Score" identity="Data Governance\Banking\AnaCredit 2.0\Loan Portfolio\Debt to Income Ratio\Attribute4" type="BDNATTRIB">
+                    <Attributes>
+                        <attribute name="Instructions" value="1 = Lowest&#xA;5 = Highest"/>
+                        <attribute name="Value" value="5"/>
+                        <attribute name="Required" value="Y"/>
+                        <attribute name="Type" value="Common"/>
+                    </Attributes>
+                </Resource>
+                <Resource label="Quality Risk Description" identity="Data Governance\Banking\AnaCredit 2.0\Loan Portfolio\Debt to Income Ratio\Attribute5" type="BDNATTRIB">
+                    <Attributes>
+                        <attribute name="Instructions" value="Describe the risks that have an impact on the quality (e.g. Manual Processes, etc.)"/>
+                        <attribute name="Value" value=""/>
+                        <attribute name="Required" value="N"/>
+                        <attribute name="Type" value="Common"/>
+                    </Attributes>
+                </Resource>
+                <Resource label="Source" identity="Data Governance\Banking\AnaCredit 2.0\Loan Portfolio\Debt to Income Ratio\Attribute6" type="BDNATTRIB">
+                    <Attributes>
+                        <attribute name="Instructions" value="server/unique-location/file/ or server/database/schema/catalog/table"/>
+                        <attribute name="Value" value="AWSS3/gelsas/loan_final313"/>
+                        <attribute name="Required" value="N"/>
+                        <attribute name="Type" value="Common"/>
+                    </Attributes>
+                </Resource>
+            </dependency>
+            <dependency type="P">
+                <Resource identity="Data Governance\Banking\AnaCredit 2.0\Loan Portfolio" type="BDNTERMREF"/>
+            </dependency>
+            <dependency type="A">
+                <Resource label="uses" identity="Data Governance\Banking\AnaCredit 2.0\Loan Portfolio\Amount lent to customers with a Debt to Income Ratio &gt; 30%" type="BDNTERMREF"/>
+                <Resource label="uses" identity="Data Governance\Banking\AnaCredit 2.0\Loan Portfolio\Customer with a Debt to Income Ratio &gt; 30%" type="BDNTERMREF"/>
+                <Resource label="KPI" identity="Data Governance\Banking\Improve the Loan Portfolio Quality\Reduce by 5% by the amount lent to over-indebted customers\Reduce the Debt to Income 30 Loan Amount" type="BDNTERMREF"/>
+                <Resource label="installment" identity="A5CTTMUV.BO0001LZ/Column" type="EXTERNALITEM">
+                    <Attributes>
+                        <attribute name="ID" value="A5CTTMUV.BO0001LZ/Column"/>
+                        <attribute name="Location" value="/Data Governance/Data/SAS/loan_final313.csv"/>
+                        <attribute name="Type" value="Column"/>
+                        <attribute name="Context" value="DF_EXTERNAL"/>
+                    </Attributes>
+                </Resource>
+                <Resource label="annual_inc" identity="A5CTTMUV.BO0001LF/Column" type="EXTERNALITEM">
+                    <Attributes>
+                        <attribute name="ID" value="A5CTTMUV.BO0001LF/Column"/>
+                        <attribute name="Location" value="/Data Governance/Data/SAS/loan_final313.csv"/>
+                        <attribute name="Type" value="Column"/>
+                        <attribute name="Context" value="DF_EXTERNAL"/>
+                    </Attributes>
+                </Resource>
+                <Resource label="loan_final313.csv" identity="A5CTTMUV.BY000001/ExternalTable" type="EXTERNALITEM">
+                    <Attributes>
+                        <attribute name="ID" value="A5CTTMUV.BY000001/ExternalTable"/>
+                        <attribute name="Location" value="/Data Governance/Data/SAS/loan_final313.csv"/>
+                        <attribute name="Type" value="ExternalFile"/>
+                        <attribute name="Context" value="DF_EXTERNAL"/>
+                    </Attributes>
+                </Resource>
+                <Resource label="GATEDEMO039_LOAN" identity="a8b001e8-a328-4bfe-b1e2-aff1b3bd4869" type="EXTERNALITEM">
+                    <Attributes>
+                        <attribute name="ID" value="a8b001e8-a328-4bfe-b1e2-aff1b3bd4869"/>
+                        <attribute name="Type" value="Table.MIR"/>
+                        <attribute name="Context" value="DF_EXTERNAL"/>
+                    </Attributes>
+                </Resource>
+                <Resource identity="Ratio" type="BDNTAG"/>
+            </dependency>
+        </Dependencies>
+    </Resource>
+</Resources>

@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Resources>
+    <Resource label="DGB" createDate="2020-01-06T01:09:49.399-05:00" identity="DGB" type="BDNTERMTYPE">
+        <Attributes>
+            <attribute name="Description" value="Data Governance on the SAS Platform. Main term type."/>
+            <attribute name="CreatedByUser" value="sasdemo"/>
+            <attribute name="ModifiedByUser" value="sasdemo"/>
+            <attribute name="AllowCustomAttributes" value="N"/>
+            <attribute name="Enabled" value="N"/>
+        </Attributes>
+        <Dependencies>
+            <dependency type="I">
+                <Resource label="Business Rules" identity="DGB\Business Rules" type="BDNTERMTYPEATTRIB_C">
+                    <Attributes>
+                        <attribute name="Instructions" value="Explain the business rules assigned to this Entity. They will be translated into data quality controls if necessary."/>
+                        <attribute name="RENDERER" value="MULTILINETEXT"/>
+                        <attribute name="LABEL" value="Business Rules"/>
+                        <attribute name="Required" value="N"/>
+                        <attribute name="Hidden" value="N"/>
+                        <attribute name="SORT_ORDER" value="1"/>
+                    </Attributes>
+                    <Dependencies>
+                        <dependency type="I">
+                            <Resource label="" identity="DGB\Business Rules\0" type="BDNTERMTYPEAV">
+<Attributes>
+    <attribute name="LABEL" value=""/>
+    <attribute name="IS_DEFAULT" value="Y"/>
+    <attribute name="SORT_ORDER" value="1"/>
+    <attribute name="Value" value=""/>
+</Attributes>
+                            </Resource>
+                        </dependency>
+                    </Dependencies>
+                </Resource>
+                <Resource label="Source" identity="DGB\Source" type="BDNTERMTYPEATTRIB_C">
+                    <Attributes>
+                        <attribute name="Instructions" value="server/unique-location/file/ or server/database/schema/catalog/table"/>
+                        <attribute name="RENDERER" value="MULTILINETEXT"/>
+                        <attribute name="LABEL" value="Source"/>
+                        <attribute name="Required" value="N"/>
+                        <attribute name="Hidden" value="N"/>
+                        <attribute name="SORT_ORDER" value="2"/>
+                    </Attributes>
+                    <Dependencies>
+                        <dependency type="I">
+                            <Resource identity="DGB\Source\0" type="BDNTERMTYPEAV">
+<Attributes>
+    <attribute name="IS_DEFAULT" value="Y"/>
+    <attribute name="SORT_ORDER" value="1"/>
+</Attributes>
+                            </Resource>
+                        </dependency>
+                    </Dependencies>
+                </Resource>
+                <Resource label="Data Quality Controls" identity="DGB\Data Quality Controls" type="BDNTERMTYPEATTRIB_C">
+                    <Attributes>
+                        <attribute name="Instructions" value="Specifies the controls to be put in place to comply with the business rules."/>
+                        <attribute name="RENDERER" value="MULTILINETEXT"/>
+                        <attribute name="LABEL" value="Data Quality Controls"/>
+                        <attribute name="Required" value="N"/>
+                        <attribute name="Hidden" value="N"/>
+                        <attribute name="SORT_ORDER" value="3"/>
+                    </Attributes>
+                    <Dependencies>
+                        <dependency type="I">
+                            <Resource label="" identity="DGB\Data Quality Controls\0" type="BDNTERMTYPEAV">
+<Attributes>
+    <attribute name="LABEL" value=""/>
+    <attribute name="IS_DEFAULT" value="Y"/>
+    <attribute name="SORT_ORDER" value="1"/>
+    <attribute name="Value" value=""/>
+</Attributes>
+                            </Resource>
+                        </dependency>
+                    </Dependencies>
+                </Resource>
+                <Resource label="Data Quality Controls Dimensions" identity="DGB\Data Quality Controls Dimensions" type="BDNTERMTYPEATTRIB_C">
+                    <Attributes>
+                        <attribute name="Instructions" value="Controls implemented to cover the quality requirements"/>
+                        <attribute name="RENDERER" value="MULTISELECTLIST"/>
+                        <attribute name="LABEL" value="Data Quality Controls Dimensions"/>
+                        <attribute name="Required" value="N"/>
+                        <attribute name="Hidden" value="N"/>
+                        <attribute name="SORT_ORDER" value="4"/>
+                    </Attributes>
+                    <Dependencies>
+                        <dependency type="I">
+                            <Resource label="Accuracy" identity="DGB\Data Quality Controls Dimensions\0" type="BDNTERMTYPEAV">
+<Attributes>
+    <attribute name="LABEL" value="Accuracy"/>
+    <attribute name="IS_DEFAULT" value="N"/>
+    <attribute name="SORT_ORDER" value="1"/>
+</Attributes>
+                            </Resource>
+                            <Resource label="Completeness" identity="DGB\Data Quality Controls Dimensions\1" type="BDNTERMTYPEAV">
+<Attributes>
+    <attribute name="LABEL" value="Completeness"/>
+    <attribute name="IS_DEFAULT" value="N"/>
+    <attribute name="SORT_ORDER" value="2"/>
+</Attributes>
+                            </Resource>
+                            <Resource label="Clarity" identity="DGB\Data Quality Controls Dimensions\2" type="BDNTERMTYPEAV">
+<Attributes>
+    <attribute name="LABEL" value="Clarity"/>
+    <attribute name="IS_DEFAULT" value="N"/>
+    <attribute name="SORT_ORDER" value="3"/>
+</Attributes>
+                            </Resource>
+                            <Resource label="Integrity" identity="DGB\Data Quality Controls Dimensions\3" type="BDNTERMTYPEAV">
+<Attributes>
+    <attribute name="LABEL" value="Integrity"/>
+    <attribute name="IS_DEFAULT" value="N"/>
+    <attribute name="SORT_ORDER" value="4"/>
+</Attributes>
+                            </Resource>
+                        </dependency>
+                    </Dependencies>
+                </Resource>
+                <Resource label="Business Impact Score" identity="DGB\Business Impact Score" type="BDNTERMTYPEATTRIB_C">
+                    <Attributes>
+                        <attribute name="Instructions" value="1 = Lowest&#xA;5 = Highest"/>
+                        <attribute name="RENDERER" value="SINGLESELECTLIST"/>
+                        <attribute name="LABEL" value="Business Impact Score"/>
+                        <attribute name="Required" value="Y"/>
+                        <attribute name="Hidden" value="N"/>
+                        <attribute name="SORT_ORDER" value="5"/>
+                    </Attributes>
+                    <Dependencies>
+                        <dependency type="I">
+                            <Resource label="1" identity="DGB\Business Impact Score\0" type="BDNTERMTYPEAV">
+<Attributes>
+    <attribute name="LABEL" value="1"/>
+    <attribute name="IS_DEFAULT" value="Y"/>
+    <attribute name="SORT_ORDER" value="1"/>
+</Attributes>
+                            </Resource>
+                            <Resource label="2" identity="DGB\Business Impact Score\1" type="BDNTERMTYPEAV">
+<Attributes>
+    <attribute name="LABEL" value="2"/>
+    <attribute name="IS_DEFAULT" value="N"/>
+    <attribute name="SORT_ORDER" value="2"/>
+</Attributes>
+                            </Resource>
+                            <Resource label="3" identity="DGB\Business Impact Score\2" type="BDNTERMTYPEAV">
+<Attributes>
+    <attribute name="LABEL" value="3"/>
+    <attribute name="IS_DEFAULT" value="N"/>
+    <attribute name="SORT_ORDER" value="3"/>
+</Attributes>
+                            </Resource>
+                            <Resource label="4" identity="DGB\Business Impact Score\3" type="BDNTERMTYPEAV">
+<Attributes>
+    <attribute name="LABEL" value="4"/>
+    <attribute name="IS_DEFAULT" value="N"/>
+    <attribute name="SORT_ORDER" value="4"/>
+</Attributes>
+                            </Resource>
+                            <Resource label="5" identity="DGB\Business Impact Score\4" type="BDNTERMTYPEAV">
+<Attributes>
+    <attribute name="LABEL" value="5"/>
+    <attribute name="IS_DEFAULT" value="N"/>
+    <attribute name="SORT_ORDER" value="5"/>
+</Attributes>
+                            </Resource>
+                        </dependency>
+                    </Dependencies>
+                </Resource>
+                <Resource label="Business Impact Description" identity="DGB\Business Impact Description" type="BDNTERMTYPEATTRIB_C">
+                    <Attributes>
+                        <attribute name="Instructions" value="Specify the impact that determines the score"/>
+                        <attribute name="RENDERER" value="SINGLELINETEXT"/>
+                        <attribute name="LABEL" value="Business Impact Description"/>
+                        <attribute name="Required" value="N"/>
+                        <attribute name="Hidden" value="N"/>
+                        <attribute name="SORT_ORDER" value="6"/>
+                    </Attributes>
+                    <Dependencies>
+                        <dependency type="I">
+                            <Resource label="" identity="DGB\Business Impact Description\0" type="BDNTERMTYPEAV">
+<Attributes>
+    <attribute name="LABEL" value=""/>
+    <attribute name="IS_DEFAULT" value="Y"/>
+    <attribute name="SORT_ORDER" value="1"/>
+    <attribute name="Value" value=""/>
+</Attributes>
+                            </Resource>
+                        </dependency>
+                    </Dependencies>
+                </Resource>
+                <Resource label="Quality Risk Score" identity="DGB\Quality Risk Score" type="BDNTERMTYPEATTRIB_C">
+                    <Attributes>
+                        <attribute name="Instructions" value="1 = Lowest&#xA;5 = Highest"/>
+                        <attribute name="RENDERER" value="SINGLESELECTLIST"/>
+                        <attribute name="LABEL" value="Quality Risk Score"/>
+                        <attribute name="Required" value="Y"/>
+                        <attribute name="Hidden" value="N"/>
+                        <attribute name="SORT_ORDER" value="7"/>
+                    </Attributes>
+                    <Dependencies>
+                        <dependency type="I">
+                            <Resource label="1" identity="DGB\Quality Risk Score\0" type="BDNTERMTYPEAV">
+<Attributes>
+    <attribute name="LABEL" value="1"/>
+    <attribute name="IS_DEFAULT" value="Y"/>
+    <attribute name="SORT_ORDER" value="1"/>
+</Attributes>
+                            </Resource>
+                            <Resource label="2" identity="DGB\Quality Risk Score\1" type="BDNTERMTYPEAV">
+<Attributes>
+    <attribute name="LABEL" value="2"/>
+    <attribute name="IS_DEFAULT" value="N"/>
+    <attribute name="SORT_ORDER" value="2"/>
+</Attributes>
+                            </Resource>
+                            <Resource label="3" identity="DGB\Quality Risk Score\2" type="BDNTERMTYPEAV">
+<Attributes>
+    <attribute name="LABEL" value="3"/>
+    <attribute name="IS_DEFAULT" value="N"/>
+    <attribute name="SORT_ORDER" value="3"/>
+</Attributes>
+                            </Resource>
+                            <Resource label="4" identity="DGB\Quality Risk Score\3" type="BDNTERMTYPEAV">
+<Attributes>
+    <attribute name="LABEL" value="4"/>
+    <attribute name="IS_DEFAULT" value="N"/>
+    <attribute name="SORT_ORDER" value="4"/>
+</Attributes>
+                            </Resource>
+                            <Resource label="5" identity="DGB\Quality Risk Score\4" type="BDNTERMTYPEAV">
+<Attributes>
+    <attribute name="LABEL" value="5"/>
+    <attribute name="IS_DEFAULT" value="N"/>
+    <attribute name="SORT_ORDER" value="5"/>
+</Attributes>
+                            </Resource>
+                        </dependency>
+                    </Dependencies>
+                </Resource>
+                <Resource label="Quality Risk Description" identity="DGB\Quality Risk Description" type="BDNTERMTYPEATTRIB_C">
+                    <Attributes>
+                        <attribute name="Instructions" value="Describe the risks that have an impact on the quality (e.g. Manual Processes, etc.)"/>
+                        <attribute name="RENDERER" value="SINGLELINETEXT"/>
+                        <attribute name="LABEL" value="Quality Risk Description"/>
+                        <attribute name="Required" value="N"/>
+                        <attribute name="Hidden" value="N"/>
+                        <attribute name="SORT_ORDER" value="8"/>
+                    </Attributes>
+                    <Dependencies>
+                        <dependency type="I">
+                            <Resource label="" identity="DGB\Quality Risk Description\0" type="BDNTERMTYPEAV">
+<Attributes>
+    <attribute name="LABEL" value=""/>
+    <attribute name="IS_DEFAULT" value="Y"/>
+    <attribute name="SORT_ORDER" value="1"/>
+    <attribute name="Value" value=""/>
+</Attributes>
+                            </Resource>
+                        </dependency>
+                    </Dependencies>
+                </Resource>
+                <Resource label="Status" identity="DGB\Status" type="BDNTERMTYPEATTRIB_S">
+                    <Dependencies>
+                        <dependency type="I">
+                            <Resource label="Production" identity="DGB\Status\0" type="BDNTERMTYPEAV">
+<Attributes>
+    <attribute name="LABEL" value="Production"/>
+    <attribute name="Color" value="GREEN"/>
+    <attribute name="IS_DEFAULT" value="N"/>
+    <attribute name="SORT_ORDER" value="1"/>
+    <attribute name="Value" value="4"/>
+</Attributes>
+                            </Resource>
+                            <Resource label="Editing" identity="DGB\Status\1" type="BDNTERMTYPEAV">
+<Attributes>
+    <attribute name="LABEL" value="Editing"/>
+    <attribute name="Color" value="BLUE"/>
+    <attribute name="IS_DEFAULT" value="N"/>
+    <attribute name="SORT_ORDER" value="2"/>
+    <attribute name="Value" value="3"/>
+</Attributes>
+                            </Resource>
+                            <Resource label="On Hold" identity="DGB\Status\2" type="BDNTERMTYPEAV">
+<Attributes>
+    <attribute name="LABEL" value="On Hold"/>
+    <attribute name="Color" value="RED"/>
+    <attribute name="IS_DEFAULT" value="N"/>
+    <attribute name="SORT_ORDER" value="3"/>
+    <attribute name="Value" value="2"/>
+</Attributes>
+                            </Resource>
+                            <Resource label="Under Review" identity="DGB\Status\3" type="BDNTERMTYPEAV">
+<Attributes>
+    <attribute name="LABEL" value="Under Review"/>
+    <attribute name="Color" value="YELLOW"/>
+    <attribute name="IS_DEFAULT" value="N"/>
+    <attribute name="SORT_ORDER" value="4"/>
+    <attribute name="Value" value="1"/>
+</Attributes>
+                            </Resource>
+                            <Resource label="Not Specified" identity="DGB\Status\4" type="BDNTERMTYPEAV">
+<Attributes>
+    <attribute name="LABEL" value="Not Specified"/>
+    <attribute name="Color" value="GRAY"/>
+    <attribute name="IS_DEFAULT" value="Y"/>
+    <attribute name="SORT_ORDER" value="5"/>
+    <attribute name="Value" value="0"/>
+</Attributes>
+                            </Resource>
+                        </dependency>
+                    </Dependencies>
+                </Resource>
+                <Resource label="Importance" identity="DGB\Importance" type="BDNTERMTYPEATTRIB_S">
+                    <Dependencies>
+                        <dependency type="I">
+                            <Resource label="Critical" identity="DGB\Importance\0" type="BDNTERMTYPEAV">
+<Attributes>
+    <attribute name="LABEL" value="Critical"/>
+    <attribute name="IS_DEFAULT" value="N"/>
+    <attribute name="SORT_ORDER" value="1"/>
+    <attribute name="Value" value="5"/>
+</Attributes>
+                            </Resource>
+                            <Resource label="High" identity="DGB\Importance\1" type="BDNTERMTYPEAV">
+<Attributes>
+    <attribute name="LABEL" value="High"/>
+    <attribute name="IS_DEFAULT" value="N"/>
+    <attribute name="SORT_ORDER" value="2"/>
+    <attribute name="Value" value="4"/>
+</Attributes>
+                            </Resource>
+                            <Resource label="Medium" identity="DGB\Importance\2" type="BDNTERMTYPEAV">
+<Attributes>
+    <attribute name="LABEL" value="Medium"/>
+    <attribute name="IS_DEFAULT" value="Y"/>
+    <attribute name="SORT_ORDER" value="3"/>
+    <attribute name="Value" value="3"/>
+</Attributes>
+                            </Resource>
+                            <Resource label="Low" identity="DGB\Importance\3" type="BDNTERMTYPEAV">
+<Attributes>
+    <attribute name="LABEL" value="Low"/>
+    <attribute name="IS_DEFAULT" value="N"/>
+    <attribute name="SORT_ORDER" value="4"/>
+    <attribute name="Value" value="2"/>
+</Attributes>
+                            </Resource>
+                            <Resource label="Very Low" identity="DGB\Importance\4" type="BDNTERMTYPEAV">
+<Attributes>
+    <attribute name="LABEL" value="Very Low"/>
+    <attribute name="IS_DEFAULT" value="N"/>
+    <attribute name="SORT_ORDER" value="5"/>
+    <attribute name="Value" value="1"/>
+</Attributes>
+                            </Resource>
+                            <Resource label="Not Specified" identity="DGB\Importance\5" type="BDNTERMTYPEAV">
+<Attributes>
+    <attribute name="LABEL" value="Not Specified"/>
+    <attribute name="IS_DEFAULT" value="N"/>
+    <attribute name="SORT_ORDER" value="6"/>
+    <attribute name="Value" value="0"/>
+</Attributes>
+                            </Resource>
+                        </dependency>
+                    </Dependencies>
+                </Resource>
+                <Resource label="Data Steward" identity="DGB\Data Steward" type="BDNTERMTYPEROLE">
+                    <Attributes>
+                        <attribute name="LABEL" value="Data Steward"/>
+                        <attribute name="Description" value="Member of the taskforce. Helps the Dataowner continually improve the data quality."/>
+                    </Attributes>
+                </Resource>
+                <Resource label="Data Quality Manager" identity="DGB\Data Quality Manager" type="BDNTERMTYPEROLE">
+                    <Attributes>
+                        <attribute name="LABEL" value="Data Quality Manager"/>
+                        <attribute name="Description" value="Orchestrates the implementation of rules and follows up on remediation."/>
+                    </Attributes>
+                </Resource>
+                <Resource label="Interested Party" identity="DGB\Interested Party" type="BDNTERMTYPEROLE">
+                    <Attributes>
+                        <attribute name="LABEL" value="Interested Party"/>
+                        <attribute name="Description" value=""/>
+                    </Attributes>
+                </Resource>
+                <Resource label="Business Custodian" identity="DGB\Business Custodian" type="BDNTERMTYPEROLE">
+                    <Attributes>
+                        <attribute name="LABEL" value="Business Custodian"/>
+                        <attribute name="Description" value=""/>
+                    </Attributes>
+                </Resource>
+                <Resource label="Data Owner" identity="DGB\Data Owner" type="BDNTERMTYPEROLE">
+                    <Attributes>
+                        <attribute name="LABEL" value="Data Owner"/>
+                        <attribute name="Description" value="This is the owner of this term. She / he understands the business content."/>
+                    </Attributes>
+                </Resource>
+                <Resource label="IT Custodian" identity="DGB\IT Custodian" type="BDNTERMTYPEROLE">
+                    <Attributes>
+                        <attribute name="LABEL" value="IT Custodian"/>
+                        <attribute name="Description" value="This is the owner of this term. She / he understands the technical content."/>
+                    </Attributes>
+                </Resource>
+            </dependency>
+        </Dependencies>
+    </Resource>
+</Resources>
