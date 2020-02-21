@@ -1,0 +1,87 @@
+<relationshipModels>
+<relationshipModel version="1">
+  <resource version="1">
+    <date>2019-06-14T08:55:34.396Z</date>
+    <externalId>loan_final313_sample.csv</externalId>
+    <label>loan_final313_sample.csv</label>
+    <objectType>4053
+</objectType>
+    <properties>
+      <property name="CreatedByUser">
+        <value>sas.dataPlans</value>
+      </property>
+      <property name="ModifiedByUser">
+        <value>sas.dataPlans</value>
+      </property>
+      <property name="CreationTimeStamp">
+        <value>2019-06-14T08:55:34.396Z</value>
+      </property>
+      <property name="ModifiedTimeStamp">
+        <value>2019-06-14T08:55:34.396Z</value>
+      </property>
+      <property name="ExternalId">
+        <value>loan_final313_sample.csv</value>
+      </property>
+      <property name="Source">
+        <value>intviya01</value>
+      </property>
+    </properties>
+  </resource>
+</relationshipModel>
+<relationshipModel version="1">
+  <resource version="1">
+    <date>2019-06-17T04:00:50.799Z</date>
+    <externalId>/dataSources/providers/cas/sources/cas-shared-default~fs~AWSS3</externalId>
+    <label>AWSS3</label>
+    <objectType>4022
+</objectType>
+    <properties>
+      <property name="CreatedByUser">
+        <value>sas.dataPlans</value>
+      </property>
+      <property name="ModifiedByUser">
+        <value>sas.dataPlans</value>
+      </property>
+      <property name="CreationTimeStamp">
+        <value>2019-06-17T04:00:50.799Z</value>
+      </property>
+      <property name="ModifiedTimeStamp">
+        <value>2019-06-17T04:00:50.799Z</value>
+      </property>
+      <property name="ExternalId">
+        <value>/dataSources/providers/cas/sources/cas-shared-default~fs~AWSS3</value>
+      </property>
+      <property name="Source">
+        <value>intviya01</value>
+      </property>
+    </properties>
+  </resource>
+  <relationships>
+    <relationship>
+      <relationshipType>D</relationshipType>
+        <resource version="1">
+          <objectType>4022
+</objectType>
+          <externalId>/dataSources/providers/cas/sources/cas-shared-default</externalId>
+        </resource>
+        <properties>
+          <property name="CreatedByUser">
+            <value>sas.dataPlans</value>
+          </property>
+          <property name="ModifiedByUser">
+            <value>sas.dataPlans</value>
+          </property>
+          <property name="CreationTimeStamp">
+            <value>2019-06-17T04:00:51.081Z</value>
+          </property>
+          <property name="ModifiedTimeStamp">
+            <value>2019-06-17T04:00:51.081Z</value>
+          </property>
+          <property name="Source">
+            <value> </value>
+          </property>
+        </properties>
+    </relationship>
+  </relationships>
+  </relationshipModel>
+</relationshipModels>
