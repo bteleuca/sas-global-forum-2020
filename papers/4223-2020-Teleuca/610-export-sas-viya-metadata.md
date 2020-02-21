@@ -1,6 +1,7 @@
 # Export SAS Viya metadata.
 
 How to move relationshipss from Viya Lineage into SAS 9 Lineage.
+Credits: Liz McIntosh, Vincent DelGobbo. SAS Institute Inc.
 
 ## 1. Create a SAS Viya Job
 
