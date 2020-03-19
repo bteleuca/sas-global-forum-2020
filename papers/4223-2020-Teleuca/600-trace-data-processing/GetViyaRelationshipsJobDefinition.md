@@ -1,3 +1,6 @@
+Exports SAS Viya Lineage metadata into a format that can be imported in SAS 9 Lineage
+* Double-click the Get Viya Relationships job definition file and then copy the SAS code below:
+```SAS
 *   Importing SAS Viya Relationship Information to a SAS 9 System;
 *   Vince DelGobbo, November 2018;
 options ls=max nodate;
@@ -68,6 +71,7 @@ label = '-1';
 output;
 end;
 run;
+
 proc format cntlin=work.ref_contentmapping; run; quit;
 * Create a format for relationship type for relationships;
 data work.relationshipmapping;
@@ -320,3 +324,5 @@ id resourceUri;
 var ref_id ref_createdBy ref_creationTimeStamp ref_modifiedBy
 ref_modifiedTimeStamp ref_analysisTimeStamp ref_version;
 run; quit;
+```
+* End of SAS Job Definition code file;
